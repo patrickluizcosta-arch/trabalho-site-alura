@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFuture | O Futuro da Tecnologia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">Tech<span>Future</span></div>
+        <nav class="nav-links">
+            <a href="#home">Início</a>
+            <a href="#intro">Introdução</a>
+            <a href="#dados">Dados</a>
+            <a href="#ferramentas">Ferramentas</a>
+            <a href="#praticas">Boas Práticas</a>
+            <a href="#curiosidades">Curiosidades</a>
+        </nav>
+        <div class="nav-controls">
+            <button id="theme-toggle" aria-label="Alternar modo de cor">
+                <span class="icon">☀️</span>
+            </button>
+        </div>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1 class="fade-in">O Amanhã é Agora</h1>
+            <p class="fade-in">Explorando as fronteiras da inovação tecnológica para transformar o mundo de forma simples, consciente e humana.</p>
+            <a href="#intro" class="btn-cta fade-in">Explorar Projeto</a>
+        </div>
+    </section>
+
+    <section id="intro" class="section scroll-animate">
+        <div class="container">
+            <h2>Tecnologia Conectada</h2>
+            <p class="subtitle">A evolução digital moldando nossa realidade diária.</p>
+            <div class="grid-2">
+                <div class="intro-box">
+                    <h3>Os Três Pilares</h3>
+                    <p>A tecnologia moderna se sustenta na automação inteligente, na acessibilidade universal e no processamento descentralizado de dados. Juntos, esses fatores resolvem gargalos históricos da humanidade.</p>
+                </div>
+                <div class="intro-box">
+                    <h3>O Impacto Social</h3>
+                    <p>De soluções de saúde conectadas a sistemas educacionais personalizados, a inovação técnica democratiza o acesso ao conhecimento e otimiza a qualidade de vida global.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="dados" class="section bg-alt scroll-animate">
+        <div class="container">
+            <h2>Métricas de Crescimento</h2>
+            <p class="subtitle">Indicadores visuais sobre a expansão tecnológica mundial.</p>
+            
+            <div class="grid-2">
+                <div class="chart-container">
+                    <h3>Adoção de Novas Tecnologias (Porcentagem)</h3>
+                    <div class="chart-bars">
+                        <div class="bar-group">
+                            <span class="bar-label">2020</span>
+                            <div class="bar-wrapper"><div class="bar" style="--progress: 45%;"></div></div>
+                            <span class="bar-val">45%</span>
+                        </div>
+                        <div class="bar-group">
+                            <span class="bar-label">2022</span>
+                            <div class="bar-wrapper"><div class="bar" style="--progress: 68%;"></div></div>
+                            <span class="bar-val">68%</span>
+                        </div>
+                        <div class="bar-group">
+                            <span class="bar-label">2024</span>
+                            <div class="bar-wrapper"><div class="bar" style="--progress: 82%;"></div></div>
+                            <span class="bar-val">82%</span>
+                        </div>
+                        <div class="bar-group">
+                            <span class="bar-label">2026</span>
+                            <div class="bar-wrapper"><div class="bar" style="--progress: 95%;"></div></div>
+                            <span class="bar-val">95%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <h3>Eficiência Operacional por Setor</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Setor</th>
+                                <th>Implementação</th>
+                                <th>Ganho de Eficiência</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Saúde</td>
+                                <td>Nuvem / IA</td>
+                                <td>+ 40%</td>
+                            </tr>
+                            <tr>
+                                <td>Educação</td>
+                                <td>Plataformas Digitais</td>
+                                <td>+ 55%</td>
+                            </tr>
+                            <tr>
+                                <td>Logística</td>
+                                <td>Automação/IoT</td>
+                                <td>+ 70%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ferramentas" class="section scroll-animate">
+        <div class="container">
+            <h2>Ferramentas Práticas</h2>
+            <p class="subtitle">Simule o impacto da otimização digital no seu dia a dia.</p>
+            
+            <div class="grid-2">
+                <div class="calc-box">
+                    <h3>Simulador de Economia Digital</h3>
+                    <p class="calc-desc">Insira quantas horas você gasta semanalmente em tarefas repetitivas e veja o ganho anual com automação.</p>
+                    <div class="input-group">
+                        <label for="hours-input">Horas manuais por semana:</label>
+                        <input type="number" id="hours-input" min="1" max="168" placeholder="Ex: 10">
+                    </div>
+                    <button onclick="calcularEconomia()" class="btn-action">Calcular Impacto</button>
+                    <div id="calc-result" class="result-box hidden">
+                        <p>Com automação básica, você pode economizar até <strong><span id="res-horas">0</span> horas</strong> por ano!</p>
+                    </div>
+                </div>
+
+                <div class="compare-box">
+                    <h3>Tradicional vs. Tecnológico</h3>
+                    <label for="compare-select">Escolha um cenário:</label>
+                    <select id="compare-select" onchange="atualizarComparacao()">
+                        <option value="processos">Processamento de Arquivos</option>
+                        <option value="comunicacao">Comunicação Interna</option>
+                        <option value="armazenamento">Armazenamento</option>
+                    </select>
+                    <div class="compare-display">
+                        <div class="side painel-antigo">
+                            <h4>Legado (Antigo)</h4>
+                            <p id="comp-legacy">Processos manuais em papel, levando até 5 dias úteis.</p>
+                        </div>
+                        <div class="side painel-novo">
+                            <h4>Tecnológico</h4>
+                            <p id="comp-tech">Sistemas em nuvem automatizados em tempo real.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="praticas" class="section bg-alt scroll-animate">
+        <div class="container">
+            <h2>Tecnologia Sustentável e Inovação</h2>
+            <p class="subtitle">Como alinhar códigos, infraestrutura e consciência verde.</p>
+            <div class="grid-3">
+                <div class="card-pratica">
+                    <div class="card-icon">🌱</div>
+                    <h3>Green Coding</h3>
+                    <p>Desenvolvimento de algoritmos otimizados que demandam menos processamento e reduzem o consumo de energia dos servidores.</p>
+                </div>
+                <div class="card-pratica">
+                    <div class="card-icon">⚡</div>
+                    <h3>Infraestrutura Eficiente</h3>
+                    <p>Migração para data centers alimentados 100% por fontes de energia renováveis e refrigeração inteligente.</p>
+                </div>
+                <div class="card-pratica">
+                    <div class="card-icon">🔄</div>
+                    <h3>Ciclo Fechado</h3>
+                    <p>Logística reversa e descarte correto de hardwares obsoletos, minimizando o lixo eletrônico no planeta.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="curiosidades" class="section scroll-animate">
+        <div class="container">
+            <h2>Fatos & Curiosidades</h2>
+            <p class="subtitle">Números surpreendentes da nossa era digital atual.</p>
+            
+            <div class="counter-grid">
+                <div class="counter-card">
+                    <h3 class="counter" data-target="90">0</h3>
+                    <span class="counter-suffix">%</span>
+                    <p>dos dados globais atuais foram criados apenas nos últimos dois anos.</p>
+                </div>
+                <div class="counter-card">
+                    <h3 class="counter" data-target="75">0</h3>
+                    <span class="counter-suffix">Bih+</span>
+                    <p>de dispositivos IoT estarão conectados ao redor do planeta até 2030.</p>
+                </div>
+                <div class="counter-card">
+                    <h3 class="counter" data-target="85">0</h3>
+                    <span class="counter-suffix">%</span>
+                    <p>de redução potencial em erros operacionais através de IAs bem integradas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <h2>O Futuro é Aberto</h2>
+            <p>A tecnologia é a ferramenta; a mente humana é o motor. Criar soluções eficientes, éticas e inclusivas é a nossa missão coletiva para as próximas gerações.</p>
+            <div class="footer-divider"></div>
+            <p class="copy">&copy; 2026 TechFuture. Desenvolvido de forma minimalista e profissional.</p>
+        </div>
+    </footer>
+
+    <button id="back-to-top" aria-label="Voltar ao topo">▲</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
